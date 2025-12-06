@@ -6,7 +6,7 @@ public class Publicacion {
 
 	private String contenido;
 
-	private LocalTime hora;
+	private LocalTime hora = LocalTime.now();
 
 	private int likes;
 
@@ -30,7 +30,7 @@ public class Publicacion {
 	}
 
 	public LocalTime getHora() {
-		this.hora =  LocalTime.now();
+		
 		return hora;
 	}
 
@@ -38,9 +38,7 @@ public class Publicacion {
 		this.hora = hora;
 	}
 
-	public int getLikes() {
-		return likes;
-	}
+	
 
 	public void setLikes(int likes) {
 		this.likes = likes;
@@ -52,15 +50,33 @@ public class Publicacion {
 
 
 
- public void mostrar() {
-
+ public void show() {
+	 System.out.println("Contenido: " + contenido);
+     System.out.println("Hora: " + hora);
+     System.out.println("Likes: " + likes );
  
  }
-}
- 
- 
- 
 
+ 
+ 
+ public void giveLike() {
+
+	 //Suma un me gusta a la publicacion
+	 likes++;
+	 
+	 
+ }
+
+
+ public int verLikes() {
+		return likes;
+	}
+
+
+
+
+}
+	
 
 
 
