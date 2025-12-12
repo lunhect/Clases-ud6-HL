@@ -1,6 +1,9 @@
 package com.hectorlunamoreno.poo.redsocial;
 
-public class PerfilRedSocial {
+import java.util.ArrayList;
+import java.util.List;
+
+public class PerfilRedSocial<listaPublicaciones> {
 
 	// ATRIBUTOS
 
@@ -22,6 +25,9 @@ public class PerfilRedSocial {
 
 	private Perfil estado;
 
+	private  List<Publicacion> listaPublicaciones;
+	
+	
 	// CONSTRUCTOR
 
 	public PerfilRedSocial(String idAccount, String idVisible, String biography, String city,  
@@ -36,6 +42,9 @@ public class PerfilRedSocial {
 		this.activo = activo;
 		this.verificado = false;
 		this.estado = Perfil.COMPLETADO;
+		this.listaPublicaciones = new ArrayList<>();
+		
+		
 	}
 
 	// GETTERS & SETTERS
@@ -144,9 +153,27 @@ public class PerfilRedSocial {
 	
 	}
 	
-	
-	
+	public void crearPublicacion(String texto) {
+		
+		this.listaPublicaciones.add(new Publicacion(texto));  //guarda un valor en la ultima posicion de la lista.
 
+		
+	
+		
+	}
+	
+	public void mostrarPublicaciones() {
+		
+		System.out.println(listaPublicaciones);
+		
+		
+		
+	}
+	
+	
+	
+         
+	 
 	
 	
 	

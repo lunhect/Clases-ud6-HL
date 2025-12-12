@@ -6,7 +6,7 @@ public class Publicacion {
 
 	private String contenido;
 
-	private LocalTime hora = LocalTime.now();
+	private LocalTime hora;
 
 	private int likes;
 
@@ -15,11 +15,12 @@ public class Publicacion {
 	 * @param hora
 	 * @param likes
 	 */
-	public Publicacion(String contenido, LocalTime hora, int likes) {
+	public Publicacion(String contenido) {
 		this.contenido = contenido;
-		this.hora = hora;
-		this.likes = likes;
+		this.hora = LocalTime.now();
+		this.likes = 0;
 	}
+
 
 	public String getContenido() {
 		return contenido;
