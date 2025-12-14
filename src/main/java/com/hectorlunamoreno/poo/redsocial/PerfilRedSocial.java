@@ -11,14 +11,11 @@ public class PerfilRedSocial<listaPublicaciones> {
 
 	private String idVisible;
 
-	private String Biography;
+	private String biography;
 
-	private String City;
+	private String city;
 
 	private int followers;
-
-	private int Posts;
-
 	private boolean activo;
 
 	private boolean verificado;
@@ -35,10 +32,9 @@ public class PerfilRedSocial<listaPublicaciones> {
 		super();
 		this.idAccount = idAccount;
 		this.idVisible = idVisible;
-		Biography = biography;
-		City = city;
+		this.biography = biography;
+		this.city = city;
 		this.followers = 0;
-		Posts =  0;
 		this.activo = activo;
 		this.verificado = false;
 		this.estado = Perfil.COMPLETADO;
@@ -66,19 +62,19 @@ public class PerfilRedSocial<listaPublicaciones> {
 	}
 
 	public String getBiography() {
-		return Biography;
+		return this.biography;
 	}
 
 	public void setBiography(String biography) {
-		Biography = biography;
+		this.biography = biography;
 	}
 
 	public String getCity() {
-		return City;
+		return this.city;
 	}
 
 	public void setCity(String city) {
-		City = city;
+		this.city = city;
 	}
 
 	public int getFollowers() {
@@ -90,11 +86,7 @@ public class PerfilRedSocial<listaPublicaciones> {
 	}
 
 	public int getPosts() {
-		return Posts;
-	}
-
-	public void setPosts(int posts) {
-		Posts = posts;
+		return this.listaPublicaciones.size();
 	}
 
 	public boolean isActivo() {
