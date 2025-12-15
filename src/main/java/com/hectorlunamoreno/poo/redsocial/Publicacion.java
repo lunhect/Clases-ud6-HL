@@ -4,9 +4,10 @@ import java.time.LocalTime;
 
 public class Publicacion {
 
+	private static final String FORM_DATE_TIME = "dd-mm-yyyy / HH:mm:ss"	
 	private String contenido;
 
-	private LocalTime hora;
+	private LocalDateTime hora;
  //LocalDateTime para ser preciso
 	private int likes;
 
@@ -17,7 +18,7 @@ public class Publicacion {
 	 */
 	public Publicacion(String contenido) {
 		this.contenido = contenido;
-		this.hora = LocalTime.now();
+		this.hora = LocalDateTime.now();
 		this.likes = 0;
 	}
 
@@ -30,8 +31,8 @@ public class Publicacion {
 		this.contenido = contenido;
 	}
 
-	public LocalTime getHora() {
-		
+	public LocalDateTime getHora() {
+		// .format(DateTimeFormatter.ofPattern(FORMAT_DATE_TIME));
 		return hora;
 	}
 
