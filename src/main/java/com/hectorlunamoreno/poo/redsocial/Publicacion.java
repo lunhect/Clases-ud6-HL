@@ -7,7 +7,7 @@ public class Publicacion {
 	private String contenido;
 
 	private LocalTime hora;
-
+ //LocalDateTime para ser preciso
 	private int likes;
 
 	/**
