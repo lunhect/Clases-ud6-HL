@@ -18,7 +18,7 @@ public class Publicacion {
 	 */
 	public Publicacion(String contenido) {
 		this.contenido = contenido;
-		this.hora = LocalDateTime.now();
+		this.hora = LocalDateTime.now(); //corregír
 		this.likes = 0;
 	}
 
