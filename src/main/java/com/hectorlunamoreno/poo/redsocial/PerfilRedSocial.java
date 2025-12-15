@@ -155,7 +155,7 @@ public class PerfilRedSocial<listaPublicaciones> {
 	}
 	
 	public void mostrarPublicaciones() {
-		
+		//cambiar
 		System.out.println(listaPublicaciones);
 		
 		
